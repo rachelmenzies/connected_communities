@@ -16,6 +16,16 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -649,13 +659,19 @@ main > .content-section + .content-section {
   margin-top: 1rem;
 }
 
+.impact-coming-soon {
+  margin-top: 0.75rem;
+  color: #e26143;
+  font-weight: 700;
+}
+
 @media (max-width: 760px) {
   .blog-card {
     flex-direction: column;
   }
 
   .blog-card-image {
-    width: min(260px, 100%);
+    width: min(160px, 48%);
     flex: 0 0 auto;
   }
 
@@ -690,21 +706,33 @@ main > .content-section + .content-section {
   font-size: 0.95rem;
 }
 
-body.updates-page {
+body.updates-page,
+body.impact-page,
+body.resources-page,
+body.get-involved-page {
   min-height: 100dvh;
 }
 
-body.updates-page main {
+body.updates-page main,
+body.impact-page main,
+body.resources-page main,
+body.get-involved-page main {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-body.updates-page main > .content-section {
+body.updates-page main > .content-section,
+body.impact-page main > .content-section,
+body.resources-page main > .content-section,
+body.get-involved-page main > .content-section {
   flex: 1;
 }
 
-body.updates-page .site-footer {
+body.updates-page .site-footer,
+body.impact-page .site-footer,
+body.resources-page .site-footer,
+body.get-involved-page .site-footer {
   margin-top: 0;
 }
 
@@ -826,6 +854,12 @@ body.updates-page .site-footer {
 
   .content-section {
     padding: 0.9rem 0 1rem;
+  }
+
+  body.updates-page .blog-card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
