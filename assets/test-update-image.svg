@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Test update illustration</title>
+  <desc id="desc">Abstract graphic for test blog post</desc>
+  <rect width="900" height="900" fill="#eaf0ff"/>
+  <circle cx="260" cy="280" r="160" fill="#4365E2" opacity="0.9"/>
+  <circle cx="610" cy="360" r="210" fill="#1E3FBC" opacity="0.82"/>
+  <rect x="170" y="520" width="560" height="170" rx="24" fill="#ffffff" opacity="0.95"/>
+  <text x="450" y="620" text-anchor="middle" font-family="'Space Grotesk', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="72" font-weight="700" fill="#2f4fc3">TEST</text>
+</svg>

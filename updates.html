@@ -35,18 +35,56 @@
   <main>
     <section class="content-section">
       <h1>Updates</h1>
-      <div class="blog-list">
-        <article class="blog-card">
+      <div class="blog-tools" aria-label="Filter and sort updates">
+        <div class="blog-tool-field">
+          <label class="blog-tool-label" for="updates-search">Search updates</label>
+          <input id="updates-search" class="blog-tool-input" type="search" placeholder="Search updates">
+        </div>
+        <div class="blog-tool-field">
+          <label class="blog-tool-label" for="updates-sort">Sort by date created</label>
+          <select id="updates-sort" class="blog-tool-select">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+          </select>
+        </div>
+        <div class="blog-tool-field blog-tool-field-tags">
+          <span class="blog-tool-label">Filter by tags</span>
+          <div id="updates-tags" class="blog-tag-selector" aria-label="Tag selector"></div>
+        </div>
+      </div>
+
+      <div id="updates-list" class="blog-list">
+        <article class="blog-card" data-created="2026-04-07">
           <div class="blog-card-content">
             <p class="blog-meta">April 2026</p>
             <h2 class="blog-card-title">
               <a href="updates/join-advisory-board.html">Join the Advisory Board</a>
             </h2>
             <p>The Connected Communities project is inviting expressions of interest from individuals and organisations who would like to join its Advisory Board. Members will help shape project direction, review progress, and support the development of practical resources for community-based digital learning across Scotland.</p>
+            <div class="blog-tags" aria-label="Post tags">
+              <span class="blog-tag">advisory group</span>
+              <span class="blog-tag">recruitment</span>
+            </div>
           </div>
           <img class="blog-card-image" src="assets/advisory-board-illustration.svg" alt="Illustration of an advisory board meeting">
         </article>
+
+        <article class="blog-card" data-created="2026-03-20">
+          <div class="blog-card-content">
+            <p class="blog-meta">March 2026</p>
+            <h2 class="blog-card-title">
+              <a href="updates/this-is-a-test.html">This is a test</a>
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="blog-tags" aria-label="Post tags">
+              <span class="blog-tag">advisory group</span>
+              <span class="blog-tag">test</span>
+            </div>
+          </div>
+          <img class="blog-card-image" src="assets/test-update-image.svg" alt="Illustration for test update">
+        </article>
       </div>
+      <p id="updates-empty" class="updates-empty" hidden>No updates match your search.</p>
     </section>
   </main>
 
@@ -58,5 +96,6 @@
     </div>
   </footer>
   <script src="menu.js"></script>
+  <script src="updates.js"></script>
 </body>
 </html>
