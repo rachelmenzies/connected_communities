@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connected Communities | Resources</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-link" href="index.html" aria-label="Connected Communities Home">
+        <img src="assets/logo-connected-communities.svg" alt="Connected Communities logo">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" onclick="const menu=document.getElementById('site-menu');const open=menu.classList.toggle('open');this.setAttribute('aria-expanded', String(open));">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav id="site-menu" class="menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="updates.html">Updates</a>
+        <a class="active" href="resources.html">Resources</a>
+        <a href="impact.html">Impact</a>
+        <a href="get-involved.html">Get Involved</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Resources</h1>
+    <p>Coming soon.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-text">Connected Communiities in a research project run by the University of Dundee, funded by the Scottish Government.</p>
+    <div class="footer-logos" aria-label="Funder and partner logos">
+      <img src="assets/logo-scottish-government.svg" alt="Scottish Government logo">
+      <img src="assets/logo-university-of-dundee.png" alt="University of Dundee logo">
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+</body>
+</html>

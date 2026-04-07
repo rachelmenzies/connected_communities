@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="teamPlaceholderTitle teamPlaceholderDesc">
+  <title id="teamPlaceholderTitle">Profile photo placeholder</title>
+  <desc id="teamPlaceholderDesc">Placeholder portrait icon</desc>
+  <rect width="800" height="600" fill="#f3f5fb"/>
+  <circle cx="400" cy="230" r="110" fill="#dbe4ff"/>
+  <path d="M190 520c24-108 113-174 210-174s186 66 210 174z" fill="#c7d6ff"/>
+  <circle cx="400" cy="225" r="78" fill="#a8bff7"/>
+</svg>

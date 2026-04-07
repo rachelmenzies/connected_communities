@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="160" viewBox="0 0 920 160" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Connected Communities</title>
+  <desc id="logoDesc">Connected Communities logo text</desc>
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4365E2"/>
+      <stop offset="100%" stop-color="#1E3FBC"/>
+    </linearGradient>
+  </defs>
+  <text
+    x="16"
+    y="106"
+    fill="url(#logoGradient)"
+    font-family="'Space Grotesk', 'Avenir Next', 'Trebuchet MS', sans-serif"
+    font-size="64"
+    font-weight="700"
+    letter-spacing="0.4"
+  >
+    Connected Communities
+  </text>
+</svg>

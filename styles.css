@@ -1,0 +1,402 @@
+:root {
+  --bg: #e2e2e2;
+  --surface: #e2e2e2;
+  --text: #3b3b3b;
+  --muted: #4c4c4c;
+  --accent: #4365e2;
+  --accent-strong: #1e3fbc;
+  --accent-soft: #e3e9ff;
+  --danger: #f36365;
+  --danger-strong: #c05239;
+  --border: #dde3ea;
+  --shadow: 0 18px 45px rgba(24, 39, 75, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Space Grotesk", "Avenir Next", "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0.8rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.logo-link img {
+  display: block;
+  width: clamp(180px, 25vw, 320px);
+  height: auto;
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 9px 8px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--text);
+  border-radius: 999px;
+}
+
+.menu-toggle span + span {
+  margin-top: 6px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.menu {
+  margin: 0 0 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: flex-end;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.menu a:hover {
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+}
+
+.menu a.active {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+main {
+  width: 100%;
+  margin: 3rem 0;
+  padding: 2.5rem 1rem;
+  border-radius: 0;
+  background: var(--bg);
+  border-top: 0;
+  border-bottom: 0;
+  box-shadow: none;
+  animation: fadeUp 0.65s ease;
+}
+
+main > * {
+  width: min(900px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  margin: 0 auto;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: 0.01em;
+}
+
+main p {
+  margin-top: 1rem;
+  font-size: 1.07rem;
+  color: var(--muted);
+}
+
+main li {
+  font-size: 1.07rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.section-heading {
+  margin-top: 3rem;
+}
+
+.aims-grid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.aim-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+.aim-icon {
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  margin-bottom: 0.8rem;
+}
+
+.aim-icon svg {
+  width: 1.85rem;
+  height: 1.85rem;
+  fill: none;
+  stroke: var(--accent-strong);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.aim-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.aim-card p {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.funders-partners {
+  margin-top: 0.5rem;
+}
+
+.funder-logos {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.funder-logos img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.9rem;
+}
+
+.partners-soon {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.project-team {
+  margin-top: 0.5rem;
+}
+
+.team-grid {
+  margin-top: 1.1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.team-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.team-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #f5f5f5;
+}
+
+.team-card h3 {
+  margin: 0.85rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.team-role {
+  margin-top: 0.45rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1.4rem 1rem 1.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  background: #ffffff;
+  font-size: 0.95rem;
+}
+
+.footer-text {
+  margin: 0;
+}
+
+.footer-logos {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    padding: 0.8rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    position: relative;
+  }
+
+  .logo-link img {
+    width: min(230px, 66vw);
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .menu {
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0.65rem 1rem 0.9rem;
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 14px 20px rgba(24, 39, 75, 0.08);
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0.35rem;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu a {
+    display: block;
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    text-align: left;
+    border-radius: 10px;
+  }
+
+  main {
+    margin: 2rem 0;
+    padding: 1.8rem;
+  }
+
+  .aims-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aim-card,
+  .team-card,
+  .funder-logos img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .funder-logos {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px) and (min-width: 641px) {
+  .aims-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
