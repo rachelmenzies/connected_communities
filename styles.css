@@ -374,11 +374,119 @@ main > .content-section + .content-section {
   color: var(--muted);
 }
 
+.blog-list {
+  margin-top: 1.2rem;
+}
+
+.blog-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.15rem 1.15rem 1.25rem;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.blog-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.blog-card-image {
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  flex: 0 0 220px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #f5f8ff;
+  display: block;
+  margin-bottom: 0;
+}
+
+.blog-meta {
+  margin: 0;
+  color: #5f6675;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.blog-card-title {
+  margin: 0.55rem 0 0;
+  font-size: clamp(1.3rem, 2.3vw, 1.7rem);
+  line-height: 1.25;
+}
+
+.blog-card-title a,
+.blog-card-title a:visited {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+.blog-card-title a:hover,
+.blog-card-title a:focus-visible {
+  text-decoration: underline;
+}
+
+.blog-post {
+  max-width: none;
+}
+
+.blog-post > * {
+  width: min(1050px, calc(100% - 2rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-post h1 {
+  padding-top: 2.5rem;
+}
+
+.blog-back {
+  margin-top: 1rem;
+}
+
+.blog-back a,
+.blog-back a:visited {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.blog-back a:hover,
+.blog-back a:focus-visible {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #ffffff;
+}
+
+@media (max-width: 760px) {
+  .blog-card {
+    flex-direction: column;
+  }
+
+  .blog-card-image {
+    width: min(260px, 100%);
+    flex: 0 0 auto;
+  }
+}
+
 .aim-card:hover,
 .aim-card:focus-within,
 .team-card:hover,
 .team-card:focus-within,
-.funder-logos img:hover {
+.funder-logos img:hover,
+.blog-card:hover,
+.blog-card:focus-within {
   transform: translateY(-4px);
   box-shadow: 0 12px 26px rgba(24, 39, 75, 0.1);
   border-color: #c2cbe2;
@@ -392,6 +500,24 @@ main > .content-section + .content-section {
   border-top: 1px solid var(--border);
   background: #ffffff;
   font-size: 0.95rem;
+}
+
+body.updates-page {
+  min-height: 100dvh;
+}
+
+body.updates-page main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+body.updates-page main > .content-section {
+  flex: 1;
+}
+
+body.updates-page .site-footer {
+  margin-top: 0;
 }
 
 .footer-text {
@@ -495,7 +621,8 @@ main > .content-section + .content-section {
 
   .aim-card,
   .team-card,
-  .funder-logos img {
+  .funder-logos img,
+  .blog-card {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -534,7 +661,8 @@ main > .content-section + .content-section {
 
   .aim-card,
   .team-card,
-  .funder-logos img {
+  .funder-logos img,
+  .blog-card {
     transition: none;
   }
 }
