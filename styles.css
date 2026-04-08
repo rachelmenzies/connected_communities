@@ -31,6 +31,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 84px;
   color: var(--text);
   background: var(--bg);
   font-family: "Space Grotesk", "Avenir Next", "Trebuchet MS", sans-serif;
@@ -38,8 +39,11 @@ body {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 10;
   background: #ffffff;
   border-bottom: 1px solid var(--border);
@@ -779,6 +783,10 @@ body.get-involved-page .site-footer {
 }
 
 @media (max-width: 640px) {
+  body {
+    padding-top: 72px;
+  }
+
   .header-inner {
     padding: 0.8rem 1rem;
     align-items: center;
