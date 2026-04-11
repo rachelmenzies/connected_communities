@@ -292,6 +292,14 @@ main > .content-section + .content-section {
   gap: 1rem;
 }
 
+body.get-involved-page .get-involved-content {
+  margin-top: 1.25rem;
+}
+
+body.get-involved-page .get-involved-block + .get-involved-block {
+  margin-top: 1.5rem;
+}
+
 .aim-card {
   background: #ffffff;
   border: 1px solid var(--border);
@@ -320,7 +328,8 @@ main > .content-section + .content-section {
   stroke-linejoin: round;
 }
 
-.aim-card h2 {
+.aim-card h2,
+.aim-card h3 {
   margin: 0;
   font-size: 1.15rem;
   line-height: 1.35;
